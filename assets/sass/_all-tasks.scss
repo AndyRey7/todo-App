@@ -1,9 +1,13 @@
 #all-tasks {
+    height: 100%;
+    overflow: auto;
+
     .header {
         background: url('http://pureimg.com/public/uploads/large/2414995241498p9ryhwkpfxlp0bx9peiis04rfg18nv3tfohyljbsfuls3kzol15amqkvvj0vebexi73mvgedwetntlfb0qqpixja5vxvwgandmb.jpg')
         center center;
         background-repeat: no-repeat;
         width: 100%;
+        overflow:auto;
         background-size: cover;
         color: $white;
 
@@ -94,6 +98,22 @@
         width: 100%;
         color: $white;
         padding: 50px 0;
+        transform: translate(0, 100%);
+        transition: all .3s ease-in-out;
+        &.active {
+            transform: translate(0, 0);
+        }
+        .close-btn {
+            position: absolute;
+            right: 35px;
+            top: 35px;
+            cursor: pointer;
+            padding: 15px;
+            .fas {
+                font-size: 36px;
+
+            }
+        }
         form {
             display: block;
             max-width: 500px;
@@ -131,6 +151,15 @@
         textarea {
             height: 250px;
         }
+        button {
+            background: $lightBlue;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: $white;
+            padding: 15px 25px;
+        }
     }
 }
 
@@ -139,6 +168,6 @@
     display: block;
     width: 100%;
     margin: 0 auto;
-
+    padding: 0 15px;
 
 }
