@@ -1,0 +1,29 @@
+#home {
+    background: url('http://pureimg.com/public/uploads/large/2414995241498p9ryhwkpfxlp0bx9peiis04rfg18nv3tfohyljbsfuls3kzol15amqkvvj0vebexi73mvgedwetntlfb0qqpixja5vxvwgandmb.jpg')
+    center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .welcome-box {
+        background: rgba(0,0,0,.6);
+        padding: 40px 15px;
+        text-align: center;
+
+        h1 {
+            font-family: 'Roboto';
+            font-size: 28px;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

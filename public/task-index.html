@@ -5,24 +5,102 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/cc8c4c7774.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
     <div id="all-tasks">
-        <div class="header">
-            <div class="tasks-total">
-                <div class="logo">
-                    Task Manager
+        <section class="header">
+            <div class="top">
+                <div class="tasks-total">
+                    <a href="./index.html"> <div class="logo">
+                        Task Manager
+                    </div>
+                    </a>
+                    <div class="task">
+                        <span class="number">12</span> tasks
+                    </div>
+                    <div class="task">
+                        <span class="number">5</span> completed
+                    </div>
                 </div>
-                <div class="task">
-                    <span class="number">12</span> tasks
-                </div>
-                <div class="task">
-                    <span class="number">5</span> completed
+                <div class="add-circle">
+                    <i class="fas fa-plus-circle"></i>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="content-area">
+            <div class="container">
+                <div class="tasks-container">
+                    <div class="task-box">
+                        <div class="title">
+                            Laundry
+                        </div>
+                        <div class="date">
+                            Created: December 10, 2018
+                        </div>
+                        <div class="check-box">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="title">
+                            Return Redbox Movie
+                        </div>
+                        <div class="date">
+                            Created: April 3, 2019
+                        </div>
+                        <div class="check-box">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="title">
+                            Clean Bathroom
+                        </div>
+                        <div class="date">
+                            Created: July 7, 2019
+                        </div>
+                        <div class="check-box">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-form">
+            <form>
+                <h3>Add A New Task</h3>
+                <div class="form-group">
+                    <label for"title">Title:</label>
+                    <input type="text" name="title" value="">
+                </div>
+                <div class="form-group">
+                    <label for"category">Category:</label>
+                    <input type="text" name="category" value="">
+                </div>
+                <div class="form-group">
+                    <label for"notes">Notes:</label>
+                    <textarea name="notes"></textarea>
+                </div>
+
+            </form>
+        </section>
+
     </div>
+
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.add-circle').on('click', function() {
+                console.log('show me popup')
+            })
+        })
+    </script>
   </body>
 </html>
