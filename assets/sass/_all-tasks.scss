@@ -1,6 +1,7 @@
 #all-tasks {
     height: 100%;
-    overflow: auto;
+    overflow: scroll;
+
 
     .header {
         background: url('http://pureimg.com/public/uploads/large/2414995241498p9ryhwkpfxlp0bx9peiis04rfg18nv3tfohyljbsfuls3kzol15amqkvvj0vebexi73mvgedwetntlfb0qqpixja5vxvwgandmb.jpg')
@@ -99,10 +100,12 @@
         width: 100%;
         color: $white;
         padding: 50px 0;
-        transform: translate(0, 100%);
-        transition: all .3s ease-in-out;
+        display: none;
+        // transform: translate(0, 100%);
+        // transition: all .3s ease-in-out;
         &.active {
-            transform: translate(0, 0);
+            //transform: translate(0, 0);
+            display: block;
         }
         .close-btn {
             position: absolute;
@@ -120,6 +123,7 @@
             max-width: 500px;
             margin: 0 auto;
             padding: 15px;
+
         }
         h3 {
             margin: 50px 0;
@@ -176,16 +180,18 @@
 
 //LAPTOPS
 @media screen and (min-width: 1200px) {
-  body {
-    background-color: red;
-  }
+
 }
 
 // TABLETS
 @media screen and (max-width: 1199px) {
-  body {
-    background-color: blue;
-  }
+    .header {
+        .top {
+            .add-circle {
+                z-index: 25;
+            }
+        }
+    }
 }
 
 // PHONES
@@ -194,7 +200,14 @@
         .header {
             .top {
                 .add-circle {
-                    bottom: -25px;
+                    top: 134px;
+                    right: 25px;
+                    z-index: 25;
+                }
+                .tasks-total {
+                    .task {
+                        display: block;
+                    }
                 }
             }
         }
